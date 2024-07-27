@@ -18,7 +18,9 @@ git branch -M main
 git remote add origin git@github.com:makotakara/flask_microblog.git
 git push -u origin main
 
+# Появился новый файл, добавь его в гит
+git add .
 # Сделал изменения, сохранил, сделал коммит
-git commit -m 'comment'
+git commit --a -m 'comment'
 # Запушил в remote repository
 git push -u origin main
