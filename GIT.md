@@ -11,3 +11,14 @@ git config --global color.branch auto
 mkdir flask_microblog 
 cd flask_microblog
 git init
+git add .
+vi GIT.md
+git commit -m 'New file GIT.md'
+git branch -M main
+git remote add origin git@github.com:makotakara/flask_microblog.git
+git push -u origin main
+
+# Сделал изменения, сохранил, сделал коммит
+git commit -m 'comment'
+# Запушил в remote repository
+git push -u origin main
