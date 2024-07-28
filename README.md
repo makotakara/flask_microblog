@@ -44,8 +44,17 @@ git push -u origin main
 # Скачать изменения в репозитории
 git pull origin master
 
+# Начало работы
 # На новом сервере
 # Склонировать репозиторий
 cd project/
 git clone git@github.com:makotakara/flask_microblog.git
+cd flask_microblog
+# Создать и активировать вирт. среду
+python3 -m venv venv
+source venv/bin/activate
 
+## Записать версии пакетов в requirements.txt
+pip freeze > requirements.txt
+## Установить пакеты из requirements.txt 
+pip install -r requirements.txt
