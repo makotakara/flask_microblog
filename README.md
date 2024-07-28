@@ -46,6 +46,9 @@ git pull origin master
 
 # Начало работы
 # На новом сервере
+# Открыть порт в файерволле
+sudo ufw allow 5000
+
 # Склонировать репозиторий
 cd project/
 git clone git@github.com:makotakara/flask_microblog.git
@@ -58,3 +61,9 @@ source venv/bin/activate
 pip freeze > requirements.txt
 ## Установить пакеты из requirements.txt 
 pip install -r requirements.txt
+
+
+# Запуск приложения на localhost
+flask run
+# Запуск приложения на внешнем ip
+flask run --host=0.0.0.0
