@@ -13,8 +13,8 @@ mkdir flask_microblog
 cd flask_microblog
 git init
 git add .
-vi GIT.md
-git commit -m 'New file GIT.md'
+vi README.md
+git commit -m 'New file README.md'
 git branch -M main
 
 # Добавление ssh ключа в github
@@ -33,7 +33,6 @@ ssh -T git@github.com
 
 # Добавить новый remote repository
 git remote add origin git@github.com:makotakara/flask_microblog.git
-git push -u origin main
 
 # Появился новый файл, добавь его в гит
 git add .
@@ -41,8 +40,6 @@ git add .
 git commit -a -m 'comment'
 # Запушил в remote repository
 git push -u origin main
-# Скачать изменения в репозитории
-git pull origin master
 
 # Начало работы
 # На новом сервере
@@ -53,15 +50,23 @@ sudo ufw allow 5000
 cd project/
 git clone git@github.com:makotakara/flask_microblog.git
 cd flask_microblog
-# Создать и активировать вирт. среду
+
+# Если репозиторий уже склонирован и нужно получить изменения в репозитории
+cd project/
+git pull origin main
+cd flask_microblog
+
+# Создать вирт. среду (Для 1-го раза)
 python3 -m venv venv
+# Активировать вирт. среду
 source venv/bin/activate
+## Деактивировать вирт. среду
+deactivate
 
 ## Записать версии пакетов в requirements.txt
 pip freeze > requirements.txt
 ## Установить пакеты из requirements.txt 
 pip install -r requirements.txt
-
 
 # Запуск приложения на localhost
 flask run
