@@ -1,5 +1,4 @@
-# GIT
-# Install
+# GIT install
 sudo apt-get install git
 # config
 git config --global user.name "makotakara"
@@ -17,6 +16,7 @@ vi README.md
 git commit -m 'New file README.md'
 git branch -M main
 
+##################################
 # Добавление ssh ключа в github
 # Генерация нового ключа
 ssh-keygen -t ed25519 -C "romanbog@gmail.com"
@@ -31,6 +31,7 @@ https://github.com/settings/keys
 # Test connections
 ssh -T git@github.com
 
+##################################
 # Добавить новый remote repository
 git remote add origin git@github.com:makotakara/flask_microblog.git
 
@@ -41,8 +42,9 @@ git commit -a -m 'comment'
 # Запушил в remote repository
 git push -u origin main
 
-# Начало работы
-# На новом сервере
+##################################
+# Начало работы на новом сервере
+# Установить GIT, добавить ssh ключи для github
 # Открыть порт в файерволле
 sudo ufw allow 5000
 
@@ -52,7 +54,7 @@ git clone git@github.com:makotakara/flask_microblog.git
 cd flask_microblog
 
 # Если репозиторий уже склонирован и нужно получить изменения в репозитории
-cd project/
+cd project/flask_microblog/
 git pull origin main
 cd flask_microblog
 
