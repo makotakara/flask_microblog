@@ -56,7 +56,6 @@ cd flask_microblog
 # Если репозиторий уже склонирован и нужно получить изменения в репозитории
 cd project/flask_microblog/
 git pull origin main
-cd flask_microblog
 
 # Создать вирт. среду (Для 1-го раза)
 python3 -m venv venv
