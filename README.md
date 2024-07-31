@@ -73,3 +73,12 @@ pip install -r requirements.txt
 flask run
 # Запуск приложения на внешнем ip
 flask run --host=0.0.0.0
+
+# Создание репозитория миграции для приложения
+flask db init
+# Созданиее сценария для миграция БД (создание/обновление таблиц)
+flask db migrate -m "users table"
+# Применить изменения к БД
+flask db upgrade
+# Отменить последнюю миграцию
+flask db downgrade
